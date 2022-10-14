@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+    <header style="width: 100px; height: 200px;">
+
+        <img style="width: 200px; height: 200px;" src="img/images.jpg" alt="">
+
+    </header>
+    <form style="padding: 20px; display: flex; flex-direction: column; align-items: center;" action="/add_text" method="POST">
+        <label for="textv">Nome</label>
+        <input type="text" id="textv" name="textv" value="">
+        <label for="texti">Idade</label>
+        <input type="text" id="texti" name="texti" value="">
+        <label for="textu">Email</label>
+        <input type="text" id="textu" name="textu" value="">
+        <input type="submit" value="Enviar">
+      
+   </form>
+   <br><br><hr>
+   <ul>
+        {% for text in all_text %}
+        <li> {{ text }} </li>
+        {% endfor %}
+   </ul></html>
