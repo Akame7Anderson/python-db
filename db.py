@@ -4,7 +4,7 @@ cursor = connection.cursor()
 
 #inserting data to db
 def add_text(name, idade, email):
-    cursor.execute("INSERT INTO form(ID, Nome, Idade, Email) VALUES (DEFAULT, %s, %s, %s)", (name, idade, email))
+    cursor.execute("INSERT INTO form(id, nome, idade, email) VALUES (DEFAULT, %s, %s, %s)", (name, idade, email))
     connection.commit()
     return 1
 
